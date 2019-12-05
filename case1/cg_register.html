@@ -19,7 +19,7 @@
    <title>CGIP Registration Form</title>
    <link href="cg_base.css" rel="stylesheet" />
    <link href="cg_styles.css" rel="stylesheet" />
-   <link href="cg_form.css" rel="stylesheet" />
+   <link href="cg_forms.css" rel="stylesheet" />
    <link href="cg_validate.css" rel="stylesheet" />
    <script src="cg_script.js"></script>
 </head>
@@ -56,31 +56,40 @@
       
       <form action="http://www.example.com/cg/register" method="post">
       <label>Title</label>
-      <input name="title" id="titleBox" type="text">
+      <input name="title" id="titleBox" list="titleList" type="text">
+      <datalist id="titleList">
+         <option value="Mr."></option>
+         <option value="Mrs."></option>
+         <option value="Ms."></option>
+         <option value="Prof."></option>
+         <option value="Dr."></option>
+         <option value="Assist."></option>
+         <option value="Prof."></option>
+         <option value="Assoc. Prof."></option>
+      </datalist>
       <label>First Name*</label>
-      <input name="firstName" id="fnBox" type="text" required><br>
+      <input name="firstName" id="fnBox" type="text" required>
       <label>Last Name*</label>
-      <input name="lastName" id="lnBox" type="text" required><br>
+      <input name="lastName" id="lnBox" type="text" required>
       <label>Address*</label>
-      <input name="address" id="addBox" type="text" required><br>
+      <input name="address" id="addBox" type="text" required>
       <label>Company or University</label>
-      <input name="group" id="groupBox" type="text" ><br>
+      <input name="group" id="groupBox" type="text" >
       <label>E-mail*</label>
-      <input name="email" id="mailBox" type="email" required><br>
+      <input name="email" id="mailBox" type="email" required>
       <label>Phone Number*</label>
-      <input name="phoneNumber" id="phoneBox" type="tel" required  pattern=”^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$” placeholder="(nnn) nnn-nnnn"><br>
+      <input name="phoneNumber" id="phoneBox" type="tel" required  pattern=”^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$” placeholder="(nnn) nnn-nnnn">
       <label>ACGIP Membership Number</label>
-      <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern=^acgip\-\d{6}$><br>
+      <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern=^acgip\-\d{6}$>
       <label for="regList">Registration Category</label>
       <select id="regList" name="registerType">
-         <option></option>
-         <option></option>
-         <option></option>
-         <option></option>
-         <option></option>
+         <option value="member" >"ACGIP Member ($695)"</option>
+         <option value="nonmember" >"Non-Member ($795)"</option>
+         <option value="student" >"Student ($310)"</option>
+         <option value="poster" >"Poster ($95)</option>
+         <option value="guest" >"Guest ($35)</option>
       </select>
-      
-      
+         <p><input type="submit" value="Continue" /></p>
       
       </form>
 
